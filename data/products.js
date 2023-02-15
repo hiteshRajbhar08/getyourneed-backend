@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '2',
     name: 'Nike Fit Shirt',
     category: 'Shirts',
     image: '/images/p2.jpg',
@@ -13,7 +12,6 @@ const products = [
       'Made from soft, lightweight cotton in a relaxed fit, this Nike tee has a Futura logo printed on the chest, so you can bring that signature Nike style to any outfit.',
   },
   {
-    _id: '3',
     name: 'Nike fit Shirt',
     category: 'Shirts',
     image: '/images/p3.jpg',
@@ -26,7 +24,6 @@ const products = [
       'Made from soft, lightweight cotton in a relaxed fit, this Nike tee has a Futura logo printed on the chest, so you can bring that signature Nike style to any outfit.',
   },
   {
-    _id: '4',
     name: 'Nike fit Shirt',
     category: 'Shirts',
     image: '/images/p4.jpg',
@@ -39,7 +36,6 @@ const products = [
       'Ready to rock the warmth and comfort of your favourite weekender hoodie, but need to keep your look clean? This Nike Tech Fleece hoodie strikes the right balance with a lightweight, low-profile design that packs in the heat without adding bulk. You can layer with ease whether youre lounging at home or making your city commute',
   },
   {
-    _id: '5',
     name: 'Nike Air Force',
     category: 'Sneakers',
     image: '/images/p5.jpg',
@@ -52,7 +48,6 @@ const products = [
       'The radiance lives on with the b-ball original. Crossing hardwood comfort with off-court flair, it puts a fresh spin on what you know best: era-echoing, 80s construction and nothing-but-net style.',
   },
   {
-    _id: '6',
     name: 'Adidas Fit Shirt',
     category: 'Shirts',
     image: '/images/p6.jpg',
@@ -65,7 +60,6 @@ const products = [
       'Keep it simple, but dont settle for plain. This adidas t-shirt has just enough going on to be worthy of your wardrobe. Think of it as an understated canvas for making your trainers really pop. By buying cotton products from us, youre supporting more sustainable cotton farming',
   },
   {
-    _id: '7',
     name: 'Adidas Fit Shirt',
     category: 'Shirts',
     image: '/images/p7.jpg',
@@ -79,7 +73,6 @@ const products = [
   },
 
   {
-    _id: '10',
     name: 'Puma Fit Shirt',
     category: 'Shirts',
     image: '/images/p10.jpg',
@@ -92,7 +85,6 @@ const products = [
       'Made from soft, lightweight cotton in a relaxed fit, this Puma tee has a Futura logo printed on the chest, so you can bring that signature Puma style to any outfit.',
   },
   {
-    _id: '11',
     name: 'Puma Sneakers',
     category: 'Sneakers',
     image: '/images/p11.jpg',
@@ -106,7 +98,6 @@ const products = [
   },
 
   {
-    _id: '13',
     name: 'Adidas Fit Pant',
     category: 'Pants',
     image: '/images/p13.jpg',
@@ -119,7 +110,6 @@ const products = [
       'Keep it simple, but dont settle for plain. This adidas t-shirt has just enough going on to be worthy of your wardrobe. Think of it as an understated canvas for making your trainers really pop. By buying cotton products from us, youre supporting more sustainable cotton farming',
   },
   {
-    _id: '14',
     name: 'Adidas Sneakers',
     category: 'Sneakers',
     image: '/images/p14.jpg',
@@ -132,7 +122,6 @@ const products = [
       'Crafted with fine technology and futuristic design, Adidas running shoes are surely here to uplift your style and track games. Kick-off on street and field in these shoes from the worlds leading and much-loved sports brand, Adidas. Wear it with a T-shirt and shorts to look smart.',
   },
   {
-    _id: '15',
     name: 'Nike Sneakers',
     category: 'Sneakers',
     image: '/images/p15.jpg',
@@ -145,7 +134,6 @@ const products = [
       'Crafted with fine technology and futuristic design, Nike running shoes are surely here to uplift your style and track games. Kick-off on street and field in these shoes from the worlds leading and much-loved sports brand, Nike. Wear it with a T-shirt and shorts to look smart.',
   },
   {
-    _id: '16',
     name: 'Nike Sneakers',
     category: 'Sneakers',
     image: '/images/p16.jpg',

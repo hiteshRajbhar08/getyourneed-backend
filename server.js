@@ -2,7 +2,13 @@ const express = require('express');
 require('dotenv').config();
 require('colors');
 const cors = require('cors');
-const products = require('./data/products');
+const connectDB = require('./config/db');
+
+// connect DB
+connectDB();
+
+// routes
+const productRoutes = require('./routes/ProductRoute');
 
 //  init app
 const app = express();
@@ -12,9 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/api/products', (req, res) => {
-  res.send(products);
-});
+// routes middleware
+app.use('/api/products', productRoutes);
 
 // listen to server
 const PORT = process.env.PORT || 8000;
