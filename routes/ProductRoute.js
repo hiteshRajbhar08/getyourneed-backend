@@ -1,9 +1,8 @@
+const router = require('express').Router();
 const {
   getProducts,
   getProductById,
 } = require('../controllers/productController');
-
-const router = require('express').Router();
 
 // /api/products
 router.route('/').get(getProducts);
