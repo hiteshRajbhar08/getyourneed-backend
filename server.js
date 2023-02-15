@@ -11,6 +11,7 @@ connectDB();
 // routes
 const productRoutes = require('./routes/ProductRoute');
 const userRoutes = require('./routes/userRoute');
+const orderRoutes = require('./routes/orderRoutes');
 
 //  init app
 const app = express();
@@ -23,6 +24,7 @@ app.use(cors());
 // routes middleware
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
 
 // error middlewares
 app.use(notFound);
