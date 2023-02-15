@@ -36,6 +36,41 @@ const loginUser = asyncHandler(async (req, res) => {
   });
 });
 
+/**-----------------------------------------------
+ * @desc    Register New User
+ * @route   /api/user/register
+ * @method  POST
+ * @access  public
+ ------------------------------------------------*/
+const registerUser = asyncHandler(async (req, res) => {
+  let user = await User.findOne({ email: req.body.email });
+  if (user) {
+    return res.status(400).json({
+      message: 'User already exists',
+    });
+  }
+
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+  user = await User.create({
+    name: req.body.name,
+    email: req.body.email,
+    password: hashedPassword,
+  });
+
+  await user.save();
+
+  res.status(201).json({
+    _id: user._id,
+    name: user.name,
+    email: user.email,
+    isAdmin: user.isAdmin,
+    token: generateToken(user._id),
+  });
+});
+
 module.exports = {
   loginUser,
+  registerUser,
 };
