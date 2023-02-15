@@ -13,8 +13,8 @@ const getProducts = asyncHandler(async (req, res) => {
 });
 
 /**-----------------------------------------------
- * @desc    fetch All Users Products
- * @route   /api/products
+ * @desc    fetch Product details
+ * @route   /api/products/:id
  * @method  GET
  * @access  public 
  ------------------------------------------------*/
