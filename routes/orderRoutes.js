@@ -18,10 +18,10 @@ router.route('/myorders').get(protect, getMyOrders);
 // /api/orders/:id
 router.route('/:id').get(protect, getOrderById);
 
-// /api/orders/:id/pay
-router.route('/:id/pay').put(protect, updateOrderToPaid);
-
 // /api/orders/:id/deliver
 router.route('/:id/deliver').put(protect, admin, updateOrderToDelivered);
+
+// /api/orders/:id/pay
+router.route('/:id/pay').put(protect, updateOrderToPaid);
 
 module.exports = router;
