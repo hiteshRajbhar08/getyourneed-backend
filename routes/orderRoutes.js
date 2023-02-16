@@ -4,11 +4,12 @@ const {
   getOrderById,
   updateOrderToPaid,
   getMyOrders,
+  getOrders,
 } = require('../controllers/orderController');
-const { protect } = require('../middlewares/authMiddleware');
+const { protect, admin } = require('../middlewares/authMiddleware');
 
 // /api/orders
-router.route('/').post(protect, createNewOrder);
+router.route('/').post(protect, createNewOrder).get(protect, admin, getOrders);
 
 // /api/orders/myorders
 router.route('/myorders').get(protect, getMyOrders);
