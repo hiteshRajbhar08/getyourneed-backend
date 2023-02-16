@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 require('dotenv').config();
 require('colors');
 const cors = require('cors');
@@ -12,6 +13,7 @@ connectDB();
 const productRoutes = require('./routes/ProductRoute');
 const userRoutes = require('./routes/userRoute');
 const orderRoutes = require('./routes/orderRoutes');
+const uploadRoute = require('./routes/uploadRoute');
 
 //  init app
 const app = express();
@@ -25,10 +27,13 @@ app.use(cors());
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/upload', uploadRoute);
 
 app.get('/api/config/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID);
 });
+
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 // error middlewares
 app.use(notFound);
