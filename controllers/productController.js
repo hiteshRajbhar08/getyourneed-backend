@@ -30,7 +30,35 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
+/**-----------------------------------------------
+ * @desc     create product  (only admin)
+ * @route   /api/products
+ * @method  POST
+ * @access  private
+ ------------------------------------------------*/
+const createProduct = asyncHandler(async (req, res) => {
+  const product = new Product({
+    name: 'Sample name',
+    price: 0,
+    user: req.user._id,
+    image: '/images/p1.jpg',
+    brand: 'Sample brand',
+    category: 'Sample category',
+    countInStock: 0,
+    rating: 0,
+    numReviews: 0,
+    description: 'Sample description',
+  });
+
+  const createdProduct = await product.save();
+  res.status(201).json({
+    message: 'Product Created',
+    product: createdProduct,
+  });
+});
+
 module.exports = {
   getProducts,
   getProductById,
+  createProduct,
 };
