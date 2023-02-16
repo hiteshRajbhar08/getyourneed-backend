@@ -4,8 +4,12 @@ const {
   registerUser,
   getUserProfile,
   updateUserProfile,
+  getUsers,
 } = require('../controllers/userController');
-const { protect } = require('../middlewares/authMiddleware');
+const { protect, admin } = require('../middlewares/authMiddleware');
+
+// /api/users
+router.route('/').get(protect, admin, getUsers);
 
 // /api/users/login
 router.route('/login').post(loginUser);
